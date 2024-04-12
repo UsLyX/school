@@ -1,0 +1,22 @@
+.header{
+    @apply flex justify-center h-24 bg-[#44C7FF] text-white;
+    .wrapper{
+        @apply container flex justify-between items-center;
+
+        .logo{
+            @apply font-bold text-2xl;
+        }
+        .navigation{
+            @apply font-bold text-sm;
+            & *{
+                @apply mr-5 last:mr-0;
+            }
+        }
+        .login{
+            @apply flex justify-around items-center bg-[#FF6551] px-[25px] py-[15px] rounded-main;
+        }
+        .exit{
+            @apply flex justify-around items-center;
+        }
+    }
+}

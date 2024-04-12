@@ -1,0 +1,12 @@
+.preHeader{
+    @apply bg-main text-white;
+    .wrapper{
+        @apply container m-auto flex flex-col items-center;
+        .logo__text{
+            @apply font-bold text-6xl mt-[60px] mb-[25px];
+        }
+        .pageName{
+            @apply font-bold text-4xl mb-[70px];
+        }
+    }
+}

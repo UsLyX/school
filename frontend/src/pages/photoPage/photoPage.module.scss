@@ -1,0 +1,9 @@
+.galery{
+    @apply bg-white;
+    .wrapper{
+        @apply container m-auto flex flex-wrap justify-between my-[75px];
+        .img{
+            @apply mb-[50px] w-[47%];
+        }
+    }
+}

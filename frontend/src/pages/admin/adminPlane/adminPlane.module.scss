@@ -1,0 +1,14 @@
+.adminPlane{
+    .wrapper{
+        @apply container m-auto flex flex-col items-center;
+        .title{
+            @apply font-bold text-4xl my-[20px];
+        }
+        .select__box{
+            @apply w-[50%] mb-[50px];
+        }
+        .btn{
+            @apply w-[50%] bg-[#44C7FF] rounded-main font-bold text-white py-[12px] mb-[40px];
+        }
+    }
+}

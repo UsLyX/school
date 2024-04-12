@@ -1,0 +1,21 @@
+.registration{
+    @apply bg-[url('../../../assets/bgLogin.svg')] h-[inherit] w-full;
+    .wrapper{
+        @apply container m-auto;
+        .form{
+            @apply flex flex-col w-min m-auto mb-[25px] mt-[100px];
+            .reg__title{
+                @apply text-8xl text-white mb-[80px];
+            }
+            .input{
+                @apply text-white outline-none border-b-2 border-b-white bg-transparent placeholder:text-white py-[10px] mb-[60px];
+            }
+            .btn{
+                @apply text-white bg-main py-[10px] rounded-main;
+            }
+        }
+        .subLogin{
+            @apply text-center text-white mb-[150px];
+        }
+    }
+}

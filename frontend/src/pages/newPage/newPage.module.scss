@@ -1,0 +1,27 @@
+.newPage{
+    @apply flex-1;
+    .wrapper{
+        @apply container m-auto flex flex-col items-center;
+        .new__title{
+            @apply font-bold text-4xl text-center mt-[100px];
+        }
+        .img__box{
+            @apply h-[350px] w-[60%] m-auto my-[55px];
+            .img{
+                @apply m-auto object-cover h-[inherit] w-full;
+            }
+        }
+        .new__description__box{
+            @apply w-[60%] m-auto;
+            .new__description{
+                @apply font-medium text-xl mb-[30px];
+            }
+            .new__date{
+                @apply font-bold text-[#919FAE] text-sm mb-[100px];
+            }
+            .btn{
+                @apply bg-main py-[10px] px-[50px] font-bold text-white rounded-main inline-block mb-[110px];
+            }
+        }
+    }
+}

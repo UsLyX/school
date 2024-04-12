@@ -1,0 +1,12 @@
+.adminPage{
+    @apply flex flex-1;
+    .navbar{
+        @apply flex flex-col w-[25%] border-r-2;
+        .button{
+            @apply text-center bg-[#44C7FF] mt-[55px] text-white py-[20px];
+        }
+        .active{
+            @apply font-bold pl-[100px] rounded-r-[20px];
+        }
+    }
+}

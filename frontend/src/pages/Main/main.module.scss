@@ -1,0 +1,259 @@
+.banner{
+    @apply bg-main;
+    .banner__top{
+        @apply flex flex-col items-center text-white relative bg-vector h-[725px] bg-cover;
+        .wrapper{
+            @apply container flex justify-between;
+
+            .banner__top__descr{
+                @apply py-[80px] w-[50%];
+                .sub__category__text{
+                    @apply text-[#FF6551] font-bold text-base;
+                } 
+                .main__text{
+                    @apply font-bold text-6xl my-[35px] leading-normal;
+                }
+                .sup__description{
+                    @apply text-xl w-[70%] mb-[35px];
+                }
+                .login{
+                    @apply bg-[#FF6551]  border-2 border-[#FF6551] font-bold px-[40px] py-[15px] rounded-main mr-[10px];
+                }
+                .check__more__btn{
+                    @apply bg-transparent duration-300 border-2 border-[#FF6551] font-bold px-[40px] py-[15px] rounded-main
+                    hover:bg-[#FF6551];
+                }
+            }
+
+            .banner__top__photo{
+                @apply w-[50%];
+                .main__photo__box{
+                    @apply relative;
+                    .bgColorImage{
+                        @apply absolute right-[-40px] top-[30px];
+                        }
+                    .mainImg{
+                        @apply absolute right-0;
+                    }
+                }
+            }
+        }
+    }
+    .banner__bottom{
+        @apply w-full bg-main h-[300px] relative flex justify-center;
+        .card__box{
+            @apply absolute flex justify-center top-[-165px];
+            .card{
+                @apply w-[360px] bg-white mr-[40px] px-[40px] py-[35px];
+                .card__img{
+                    @apply mb-[20px];
+                }
+                .card__title{
+                    @apply font-bold text-2xl w-[240px] text-[#252B42] mb-[20px];
+                }
+                hr{
+                    @apply w-[30%] h-[4px] bg-[#E74040] mb-[20px];
+                }
+                .card__description{
+                    @apply text-[#737373] text-sm;
+                }
+            }   
+        }
+    }
+}
+
+.about__section{
+    @apply h-[745px] py-[100px];
+    .wrapper{
+        @apply container flex m-auto;
+        .about__box{
+            @apply w-[50%] flex flex-col justify-center;
+            hr{
+                @apply w-[10%] h-[4px] bg-[#E74040];
+            }
+            .about__title{
+               @apply text-[#252B42] font-bold text-4xl my-[35px];
+            }
+            .about__descpiption{
+                @apply text-[#737373] w-[80%]; 
+            }
+        }
+        .about__img__box{
+            @apply w-[50%];
+            .about__img{
+                @apply m-auto;
+            }
+        }
+    }
+}
+.info__section{
+    @apply bg-main text-white;
+    .wrapper{
+        @apply container flex justify-center m-auto;
+        .stat__card{
+            @apply flex flex-col items-center w-[240px] my-[80px];
+            .stat{
+                @apply font-bold text-6xl text-[#00F8AD];
+            }
+            .stat__description{
+                @apply font-bold text-base;
+            }
+        }
+    }
+}
+.teachers__section{
+    @apply py-[30px];
+    .wrapper{
+        @apply container m-auto;
+        .teach__cards{
+            @apply mt-[20px] flex justify-between;
+            .teach__card{
+                @apply w-fit flex flex-col items-center border-[2px] rounded-[20px] drop-shadow-[0_13px_19px_rgba(0,0,0,0.07)];
+                .teach__img{
+                    @apply rounded-t-[20px] mb-[30px] w-[240px] h-[230px] object-cover;
+                }
+                .name{
+                    @apply mb-[10px] text-base font-bold;
+                }
+                .speciality{
+                    @apply mb-[10px] text-xs text-[#737373];
+                }
+                .social__box{
+                    @apply flex mb-[35px];
+                    img{
+                        @apply mr-[20px] last:mr-0;
+                    }
+                }
+            }
+        }
+    }
+}
+.news__section{
+    .wrapper{
+        @apply container m-auto;
+        .news__header{
+           @apply mb-[40px];
+        }
+        .main__new{
+            @apply flex mb-[65px];
+            .mn__img{
+                @apply mr-[50px] w-[45%];
+            }
+            .mn__description__box{
+                @apply flex flex-col justify-center;
+                .new__title{
+                    @apply text-4xl font-bold text-[#252B42] mb-[20px];
+                }
+                .btn__link{
+                    @apply w-fit p-[12px] rounded-main bg-[#FF6551] font-bold text-white;
+                }
+            }
+        }
+        .second__news{
+            @apply flex justify-between;
+            .new{
+                @apply w-[50%];
+                .new__title{
+                    @apply font-bold text-base text-[#E74040] my-[10px];
+                }
+                .new__img{
+                    @apply w-[550px] h-[250px] object-cover rounded-main;
+                }
+                .new__description{
+                    @apply text-xs;
+                }
+                .new__date{
+                    @apply text-xs text-[#919FAE] my-[10px];
+                }
+                .btn__link{
+                    @apply block w-fit py-[10px] px-[35px] rounded-main bg-[#FF6551] font-bold text-white;
+                }
+            }
+        }
+    }
+}
+.contacts__section{
+    @apply bg-main mt-[40px] py-[65px];
+    .wrapper{
+        @apply container m-auto;
+        .contacts__header{
+            @apply mb-[35px];
+        }
+        .contacts__info__box{
+            .contact__info{
+                @apply flex items-center mb-[45px];
+                .contact__info_p{
+                    @apply text-white font-bold text-xl ml-[10px];
+                }
+            }
+        }
+        .map__box{
+            @apply flex justify-center;
+            .map__border{
+                @apply border-[#00F8AD] w-fit border-[2px] rounded-[20px] p-[10px];
+                .map{
+                    @apply rounded-[20px];
+                }
+            }
+        }
+    }
+}
+.feedback__section{
+    @apply my-[35px];
+    .wrapper{
+        @apply container m-auto;
+        .feedback__header{
+            @apply mb-[20px];
+        }
+        .feedbacks__box{
+            @apply flex justify-between mb-[40px];
+            .feedback{
+                @apply flex flex-col items-center w-[260px] pt-[25px] pb-[30px];
+                .feedback__img{
+                    @apply rounded-[50%] mb-[30px] w-[128px] h-[128px] object-cover;
+                }
+                .feedback__description{
+                    @apply text-center mb-[15px] w-[75%];
+                }
+                .stars__box{
+                    @apply flex mb-[15px];
+                }
+                .feedback__author{
+                    @apply text-[#252B42] font-bold text-base mb-[5px];
+                }
+            }
+        }
+    }
+}
+.connection__section{
+    @apply pt-[65px] pb-[165px];
+    .wrapper{
+        @apply container m-auto flex;
+        .main__info{
+            @apply w-[50%];
+            .connect__header{
+                .connect__form{
+                    @apply max-w-lg py-[35px] px-[45px] drop-shadow-[0_0_62px_rgba(0,0,0,0.25)] bg-white mt-[60px] rounded-main;
+                    .input__box{
+                        @apply flex flex-col mb-[40px];
+                        .input{
+                            @apply p-[18px] outline-none bg-[#F6F7F9] rounded-main mt-[10px] resize-none;
+                        }
+                        textarea{
+                            @apply h-[135px];
+                        }
+                    }
+                    .form__btn{
+                        @apply block w-fit py-[10px] text-sm px-[50px] rounded-main bg-[#7C30FF] font-bold text-white;
+                    }
+                }
+            }
+        }
+        .img_box{
+            @apply w-[50%];
+            .connect__img{
+                @apply m-auto;
+            }
+        }
+    }
+}

@@ -1,0 +1,32 @@
+.adminNews{
+    .wrapper{
+        @apply container m-auto flex flex-col items-center;
+        .title{
+            @apply font-bold text-4xl my-[20px];
+        }
+        .photo__label{
+            @apply w-[75%];
+        }
+        .photo__box{
+            @apply mb-[20px] cursor-pointer py-[20px] flex flex-col justify-around items-center w-[75%] border-[#44C7FF] border-dashed border-[2px] rounded-main h-[200px];
+            .fileImg{
+                @apply w-min mb-[20px];
+            }
+            input[type=file]::file-selector-button {
+                @apply mr-[20px] border-none bg-[#44C7FF] rounded-main text-white cursor-pointer py-[10px] px-[25px];
+            }
+        }
+        .news__box{
+            @apply flex flex-col w-[75%];
+            textarea{
+                @apply border-2 border-[#44C7FF] rounded-main p-[20px] resize-none outline-none h-[200px] mb-[40px];
+            }
+            input{
+                @apply border-2 border-[#44C7FF] rounded-main p-[20px] outline-none mb-[40px];
+            }
+        }
+        .btn{
+            @apply py-[12px] font-bold text-white bg-[#44C7FF] w-[75%] rounded-main mb-[40px]; 
+        }
+    }
+}

@@ -1,0 +1,32 @@
+.plane{
+    @apply flex-1;
+    .wrapper{
+        @apply container m-auto;
+    }
+    .plane__box{
+        @apply py-[50px];
+        .wrapper{
+            @apply container m-auto flex flex-col items-center;
+            .plane__item{
+                @apply mb-[80px] w-[65%];
+                .plane__date{
+                    @apply font-bold text-4xl mb-[80px] text-center;
+                }
+                .plane__cols{
+                    @apply flex justify-between;
+                    .plane__col{
+                        .plane__lesson{
+                            @apply flex mb-[60px] last:mb-0;
+                            .lesson{
+                                @apply text-main font-bold w-[150px];
+                            }
+                            .lesson__name{
+                                @apply font-bold;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

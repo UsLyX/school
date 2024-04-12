@@ -1,0 +1,43 @@
+.footer{
+    flex: 0 0 auto;
+    @apply text-white;
+    .footer__top{
+        @apply bg-main py-[50px];
+        .wrapper{
+            @apply container m-auto flex justify-between;
+            .col{
+                @apply flex flex-col;
+                .logo__text{
+                    @apply font-bold text-2xl mb-[20px];
+                }
+                .link{
+                    @apply mb-[10px] last:mb-0 font-bold text-sm;
+                }
+                .category{
+                    @apply font-bold text-base mb-[20px];
+                }
+                .contact__info{
+                    @apply flex items-center mb-[10px];
+                    .contact__info_p{
+                        @apply text-white font-bold text-sm ml-[10px];
+                    }
+                }
+            }
+        }
+    }
+    .footer__bottom{
+        @apply flex py-[20px];
+        .wrapper{
+            @apply container m-auto flex justify-between px-[150px];
+            .copyright{
+                @apply text-[#737373] text-sm font-bold;
+            }
+            .social__box{
+                @apply flex;
+                img{
+                    @apply mr-[20px] last:mr-0;
+                }
+            }
+        }
+    }
+}
