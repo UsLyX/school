@@ -15,7 +15,7 @@ const Plan = () => {
 
   const getClasses = async () => {
     try {
-      await axios.get('http://localhost:5000/schedule/classes')
+      await axios.get(`${process.env.REACT_APP_API_URL}/schedule/classes`)
       .then(res => setClasses(res.data.map(item => 
       {
         return {value: item.className, label: item.className}

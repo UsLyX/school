@@ -13,7 +13,7 @@ const Videogalery = () => {
 
   async function getVideos(){
     try {
-      await axios.get('http://localhost:5000/material/video')
+      await axios.get(`${process.env.REACT_APP_API_URL}/material/video`)
       .then(res => {
         const videos = res.data.reverse().slice(0, 12);
         setVideos(videos)
