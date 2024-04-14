@@ -36,7 +36,7 @@ const Videogalery = () => {
           {videos && videos.map((item, index) => {
               return (
                 <video controls key={index} className={styles.video} >
-                  <source src={`http://localhost:5000/${item.video.replace(/\\/g, '/')}`} type="video/mp4"/>
+                  <source src={`${process.env.REACT_APP_API_URL}/${item.video.replace(/\\/g, '/')}`} type="video/mp4"/>
                 </video>
               )
             })

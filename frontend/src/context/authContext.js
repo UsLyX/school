@@ -14,7 +14,7 @@ export const AuthProvider = ({ children }) => {
   useEffect(() => {
     const getUser = async () => {
       try {
-        await axios.post('http://localhost:5000/user/info', {jwt: jwt})
+        await axios.post(`${process.env.REACT_APP_API_URL}/user/info`, {jwt: jwt})
         .then(res => {
             setUser({
               id: res.data._id,

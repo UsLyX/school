@@ -21,7 +21,7 @@ const AdminNews = () => {
       formData.append('title', title)
       formData.append('description', description)
 
-      await axios.post("http://localhost:5000/news/create", formData, {
+      await axios.post(`${process.env.REACT_APP_API_URL}/news/create`, formData, {
         headers: {
           'content-type': 'multipart/form-data'
         } 

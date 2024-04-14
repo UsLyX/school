@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 import styles from './photoPage.module.scss'
 import PreHeader from '../../elements/preHeader/PreHeader.jsx'
-import photo from '../../assets/photo.png'
 import { useLocation } from "react-router-dom";
 
 const Photogalery = () => {
@@ -13,7 +12,7 @@ const Photogalery = () => {
   }, [pathname])
   async function getPhotos(){
     try {
-      await axios.get('http://localhost:5000/material/photo')
+      await axios.get(`${process.env.REACT_APP_API_URL}/material/photo`)
       .then(res => {
         const photos = res.data.reverse().slice(0, 6);
         setPhotos(photos)
@@ -31,7 +30,7 @@ const Photogalery = () => {
       <PreHeader pageName='Фотогалерея'></PreHeader>
       <div className={styles.galery}>
         <div className={styles.wrapper}>
-          {photos && photos.map((item, index) => <img key={index} src={`http://localhost:5000/${item.image.replace(/\\/g, '/')}`} alt="фото" className={styles.img}/>)}
+          {photos && photos.map((item, index) => <img key={index} src={`${process.env.REACT_APP_API_URL}/${item.image.replace(/\\/g, '/')}`} alt="фото" className={styles.img}/>)}
         </div>
       </div>
     </>

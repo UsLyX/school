@@ -39,7 +39,7 @@ const Authorization = () => {
       login: loginn,
       password: password
     }
-    await axios.post("http://localhost:5000/login/authorization", data)
+    await axios.post(`${process.env.REACT_APP_API_URL}/login/authorization`, data)
     .then(res => {
       login(res.data.token)
       res.data.user.roles.includes("ADMIN") ? navigate('/admin/news') : navigate('/')

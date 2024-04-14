@@ -14,7 +14,7 @@ const NewPage = () => {
 
   async function getNew() {
     try {
-      await axios.get(`http://localhost:5000/news/${params.id}`, {newId: params.id})
+      await axios.get(`${process.env.REACT_APP_API_URL}/news/${params.id}`, {newId: params.id})
       .then(res => {
           setCurrentNew(res.data)
       })
@@ -34,7 +34,7 @@ const NewPage = () => {
         <div className={styles.wrapper}>
           <p className={styles.new__title}>{currentNew && currentNew.title}</p>
           <div className={styles.img__box}>
-            <img src={currentNew && `http://localhost:5000/${currentNew.image.replace(/\\/g, '/')}`} alt="фото" className={styles.img}/>
+            <img src={currentNew && `${process.env.REACT_APP_API_URL}/${currentNew.image.replace(/\\/g, '/')}`} alt="фото" className={styles.img}/>
           </div>
           <div className={styles.new__description__box}>
             <p className={styles.new__description}>

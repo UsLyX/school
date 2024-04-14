@@ -31,7 +31,7 @@ const AdminPlane = () => {
 
   const getClasses = async () => {
     try {
-      await axios.get('http://localhost:5000/schedule/classes')
+      await axios.get(`${process.env.REACT_APP_API_URL}/schedule/classes`)
       .then(res => setClasses(res.data.map(item => 
       {
         return {value: item.className, label: item.className}
@@ -43,7 +43,7 @@ const AdminPlane = () => {
   }
   const getDays = async () => {
     try {
-      await axios.get('http://localhost:5000/schedule/days')
+      await axios.get(`${process.env.REACT_APP_API_URL}/schedule/days`)
       .then(res => setDays(res.data.map(item => 
       {
         return {value: item.dayName, label: item.dayName}
@@ -55,7 +55,7 @@ const AdminPlane = () => {
   }
   const getLessons = async () => {
     try {
-      await axios.get('http://localhost:5000/schedule/lessons')
+      await axios.get(`${process.env.REACT_APP_API_URL}/schedule/lessons`)
       .then(res => setLessons(res.data.map(item => 
       {
         return {value: item.lessonName, label: item.lessonName}
@@ -74,7 +74,7 @@ const AdminPlane = () => {
         selectedUrok: selectedUrok,
         selectedLesson: selectedLesson
       }
-      await axios.patch('http://localhost:5000/schedule/update', data)
+      await axios.patch(`${process.env.REACT_APP_API_URL}/schedule/update`, data)
       .then(res => {
         toast.success(res.data.message)
       })

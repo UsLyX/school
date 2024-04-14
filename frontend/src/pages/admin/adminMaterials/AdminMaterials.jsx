@@ -19,7 +19,7 @@ const AdminMaterials = () => {
             const formData = new FormData();
             formData.append('photo', image)
 
-            await axios.post("http://localhost:5000/material/photo/create", formData, {
+            await axios.post(`${process.env.REACT_APP_API_URL}/material/photo/create`, formData, {
                 headers: {
                     'content-type': 'multipart/form-data'
                 }
@@ -39,7 +39,7 @@ const AdminMaterials = () => {
             const formData = new FormData();
             formData.append('video', video)
 
-            await axios.post("http://localhost:5000/material/video/create", formData, {
+            await axios.post(`${process.env.REACT_APP_API_URL}/material/video/create`, formData, {
                 headers: {
                     'content-type': 'multipart/form-data'
                 }

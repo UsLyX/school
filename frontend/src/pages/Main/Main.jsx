@@ -59,7 +59,7 @@ const Main = () => {
   }, [pathname, hash, key]);
 
   const getNews = async () => {
-    await axios.get('http://localhost:5000/news/get').then(res => {
+    await axios.get(`${process.env.REACT_APP_API_URL}/news/get`).then(res => {
       const news = res.data.reverse().slice(0, 3);
       setNews(news)
     }).catch(error => console.log(error))
@@ -78,7 +78,7 @@ const Main = () => {
         description: description
       }
       
-      await axios.post('http://localhost:5000/statements/create', data)
+      await axios.post(`${process.env.REACT_APP_API_URL}/statements/create`, data)
       .then(() => {
         toast.success('Заявление отправлено')
         setName('')
@@ -245,7 +245,7 @@ const Main = () => {
             return index === news.length - 1 && 
             (
               <div key={index} className={styles.main__new}>
-                <img src={`http://localhost:5000/${item.image.replace(/\\/g, '/')}`} alt="основная новость" className={styles.mn__img}/>
+                <img src={`${process.env.REACT_APP_API_URL}/${item.image.replace(/\\/g, '/')}`} alt="основная новость" className={styles.mn__img}/>
                 <div className={styles.mn__description__box}>
                   <p className={styles.new__title}>{item.title}</p>
                   <p className='text-[#737373] text-sm mb-[50px]'>
@@ -260,7 +260,7 @@ const Main = () => {
             {news && news.reverse().map((item, index) => {
               return  index !== 0 && (
                 <div key={index} className={styles.new}>
-                  <img src={`http://localhost:5000/${item.image.replace(/\\/g, '/')}`} alt="новость" className={styles.new__img}/>
+                  <img src={`${process.env.REACT_APP_API_URL}/${item.image.replace(/\\/g, '/')}`} alt="новость" className={styles.new__img}/>
                   <p className={styles.new__title}>{item.title}</p>
                   <p className={styles.new__description}>{item.description}</p>
                   <p className={styles.new__date}>{moment(item.date).format('L').replaceAll('/', '.')}</p>

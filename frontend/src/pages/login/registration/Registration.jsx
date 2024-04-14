@@ -39,7 +39,7 @@ const Registration = () => {
       password: password
     };
     await axios
-      .post("http://localhost:5000/login/registration", data)
+      .post(`${process.env.REACT_APP_API_URL}/login/registration`, data)
       .then(() => navigate('/login/authorization'))
       .catch((e) => console.log(e));
   }
