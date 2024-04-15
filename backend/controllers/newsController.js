@@ -4,6 +4,7 @@ class newsController{
     async get(req, res) {
         try {
             const news = await ObjNew.find({});
+            console.log(news)
             res.send(news);
         } catch (error) {
             console.log(error);
