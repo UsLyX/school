@@ -58,11 +58,15 @@ const Main = () => {
     }
   }, [pathname, hash, key]);
 
-  const getNews = async () => {
-    await axios.get(`${process.env.REACT_APP_API_URL}/news/get`).then(res => {
-      const news = res.data.reverse().slice(0, 3);
-      setNews(news)
-    }).catch(error => console.log(error))
+  async function getNews() {
+    try {
+      await axios.get(`${process.env.REACT_APP_API_URL}/news/get`).then(res => {
+        const news = res.data.reverse().slice(0, 3);
+        setNews(news)
+      }).catch(error => console.log(error))
+    } catch (error) {
+      console.log('getNews: ' + error) 
+    }
   }
 
   useEffect(() => {
