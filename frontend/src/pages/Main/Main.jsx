@@ -60,7 +60,11 @@ const Main = () => {
 
   async function getNews() {
     try {
-      await axios.get(`${process.env.REACT_APP_API_URL}/news/get`).then(res => {
+      await axios.get(`${process.env.REACT_APP_API_URL}/news/get`,{
+        headers: {
+          'content-type': 'image/jpeg'
+        }
+      }).then(res => {
         const news = res.data.reverse().slice(0, 3);
         setNews(news)
       }).catch(error => console.log(error))
